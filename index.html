@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blood.Hound</title>
+    <link rel="stylesheet" type="text/css" href="./assets/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+    <!--Inserting Modal for now, will add in later if possible-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!--End of Modal links-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Indie+Flower|Francois+One|Molengo|Monoton|Righteous|Rubik+Mono+One|Staatliches&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/images/favicon.ico"> <!--Favicon needed-->
+</head>
+<body>
+    <video autoplay muted loop id="bgroundVideo">
+        <source src="./assets/images/wallpaper.mp4" type="video/mp4">
+        Your browser doesn't support HTML5 videos.
+    </video>
+    <div class="topslider">
+    </div>
+    <div class="side">
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <p class="sideT">Powered By:</p>
+        <div class = sideP>
+            <a data-fancybox data-type="iframe" data-src="https://www.mediawiki.org/wiki/MediaWiki" href="javascript:;">
+            <img class="sidePic" src="./assets/images/PoweredBy/mediawiki.png">
+            </a>
+        </div>
+        <div class = sideP>
+            <a data-fancybox data-type="iframe" data-src="https://newsapi.org/" href="javascript:;">
+            <img class="sidePic" src="./assets/images/PoweredBy/newsAPI.PNG">
+            </a>
+        </div>
+        <div class = sideP>
+            <a href="https://developers.google.com/youtube/v3/" target="_blank">
+            <img class="sidePic" src="./assets/images/PoweredBy/youtube.png">
+            </a>
+        </div>
+    </div>
+    <div class="wallpaper">
+    <div class="searchContainer searchContainer1">
+        <h1 class="title" id="title"><span id="blood">Blood</span><span id="mid">.</span><span id="hound">hound</span></h1>
+        <div id="searchbar">
+        <input class="search" id="search" type="text" placeholder="Type a keyword or name here..."></input>
+        <input type="submit" id="submit" value="Fetch">
+        </div>
+    </div>
+    <div class="container">
+        <div class="articles"></div>
+        <input type="submit" id="close" value="Close">
+        <div class="fullwiki">
+        </div>
+        <div class="videos"></div>
+        <div class="news"></div>
+    </div>
+    </div>
+    <div style="display: none;" id="modal">
+        <h2>Try to load this article here?</h2>
+        <p id="modalDesc">Some articles may not load due to preventative measures against clickjacking...</p>
+    </div>
+    <footer>
+        <h6 class="footer">Copyright ©</h6>
+        <p id="obutton">APIs</p>
+    </footer>
+    <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+</html>
