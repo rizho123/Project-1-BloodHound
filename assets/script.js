@@ -3,11 +3,10 @@ var proxyurl = "https://cors-anywhere.herokuapp.com/";
 var search = "";
 var savedSearches = JSON.parse(localStorage.getItem("SavedSearches"))
 if (!Array.isArray(savedSearches)){
-    savedSearches = ['Morgan Freeman', 'Leonardo DiCaprio', 'Brad Pitt', 'Will Smith', 'Denzel Washington',
+    savedSearches = ['Marvel Comics', 'Morgan Freeman', 'Leonardo DiCaprio', 'Brad Pitt', 'Will Smith', 'Denzel Washington',
     'Samuel L. Jackson', 'Tom Cruise', 'Hugh Jackman', 'Michael Caine', 'Dwayne Johnson', 'Kevin Durant', 'Anthony Davis', 'Trevor Ariza', 'Stephen Curry'
   ];
 }
-console.log(savedSearches)
 start()
 getHeadlines()
 $(".side").hide();
@@ -161,6 +160,7 @@ function getNews () {
 function getHeadlines () {
     var headlineURL = "https://newsapi.org/v2/top-headlines?country=us&apiKey=4bf59bd743a540a78774e25ee1328ab9";
     var title = [];
+    console.log("Title1: ", title)
     $.ajax({
         url: headlineURL,
         method: "GET"
@@ -171,6 +171,7 @@ function getHeadlines () {
         checkNull(headlineTitle)
         var headline = ' "' + headlineTitle + '" '
         title.push(headline)
+        console.log("Headlines: ", headline)
     }
     var slidingTxt = title.toString();
         var slider = $("<div>")
